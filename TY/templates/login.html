@@ -1,0 +1,12 @@
+
+<a href="register">sign up</a>
+{% for message in messages %}
+<h3>{{message}}</h3>
+    {% endfor %}
+<form method="POST"  action="login">
+    {%csrf_token%}
+    <p>Username:</p>
+    <input type="text" name="username" />
+    <p>Password:</p>
+    <input type="password" name="password" />
+    <p> <input type="submit"> </p>
